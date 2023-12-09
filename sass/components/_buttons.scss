@@ -1,0 +1,132 @@
+.filter-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    padding: 6px 14px;
+    border: none;
+    color: var(--filter-btn-text-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.43;
+    background: var(--filter-btn-bg-color);
+    border-radius: 6px;
+}
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--like-btn-bg-color);
+    box-shadow: 0px 20px 60px var(--like-btn-shadow-color);
+
+    &__icon--liked {
+        margin-top: 8px;
+    }
+
+    &:not(&--liked) &__icon--liked {
+        display: none;
+    }
+
+    &--liked &__icon {
+        display: none;
+    }
+}
+
+// Buttons
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 83px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: #f8f8fb;
+    color: #9e9da8;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    + .btn {
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
+    }
+
+    &--text {
+        font-size: 1.5rem;
+        font-weight: 400;
+        outline: none;
+        background: transparent;
+    }
+
+    &--outline {
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+        background: transparent;
+        color: #1a162e;
+    }
+
+    &--primary {
+        width: 121px;
+        height: 44px;
+        color: #1a162e;
+        border-radius: 10px;
+        background: #ffb700;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.switch-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 68px;
+    height: 30px;
+    padding: 2px 8px;
+    border: none;
+    box-shadow: -1px -1px 6px var(--switch-btn-shadow-color);
+    border-radius: 9999px;
+    background: var(--theme-switch-btn-bg-color);
+    transition: flex-direction .2s;
+
+    &__reverse {
+        flex-direction: row-reverse;
+    }
+
+    &__icon {
+        display: none;
+        width: 20px;
+    }
+
+    &__icon { 
+        display: block;
+    }
+
+    &__circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid var(--switch-btn-circle-border-color);
+        background: var(--switch-btn-circle-bg-color);
+    }
+
+}

@@ -1,0 +1,27 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 64px;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--breakcrumb-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--breakcrumb-shadow);
+
+   
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #9e9da8;
+        font-size: 1.6;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &--current {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-family: "Gordita", sans-serif;
+    background: var(--body-bg-color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    color: inherit;
+}
+
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    transition: background-color 1s 99999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
+button {
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.icon {
+    filter: var(--icon-color);
+}
+
+.switch-btn-icon {
+    filter: var(--theme-switch-btn-icon-color);
+}
+
+.no--margin {
+    margin: 0;
+}

@@ -1,0 +1,343 @@
+@use "../abstracts";
+$error-color: #e23636;
+.form {
+    width: 100%;
+    &:has(:invalid) {
+        .form__submit-btn {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        > * {
+            flex: 1;
+        }
+    }
+
+    &__group {
+        margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
+
+        &--horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+
+        .form__input-icon-error,
+        .form__error {
+            display: block;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+
+        &--medium {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        &--small {
+            font-size: 2rem;
+        }
+    }
+
+    &__label--small {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        line-height: 1.43;
+    }
+
+    &__select-wrap {
+        display: flex;
+        height: 45px;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: var(--width, 108px);
+        padding: 0 14px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.43;
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+        }
+    }
+
+    &__select + &__select {
+        border-left: 1px solid #d2d1d6;
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+        }
+    }
+
+    &__tag {
+        padding: 6px 12px;
+        color: var(--form-tag-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.43;
+        border: none;
+        border-radius: 6px;
+        background: var(--form-tag-bg-color);
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+
+    &__text-input {
+        position: relative;
+        height: 50px;
+    }
+
+    &__text-area {
+        height: 100px;
+    }
+
+    &__text-area,
+    &__text-input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 12px;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+
+        &:focus-within {
+            border-color: #77dae6;
+        }
+
+        &--small {
+            height: 42px;
+        }
+    }
+
+    &__area,
+    &__input {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+        background: transparent;
+
+        &::placeholder {
+            color: var(--form-input-placeholder-color);
+        }
+
+        &-icon {
+            margin-left: 12px;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__area {
+        padding: 8px 0;
+        resize: none;
+    }
+
+    &__select-dialog {
+        position: absolute;
+        bottom: 50px;
+        left: 12px;
+        display: flex;
+        flex-direction: column;
+        min-width: 230px;
+        max-height: 300px;
+        background: var(--form-dialog-bg-color);
+        border: 1px solid #d2d1d6;
+        border-radius: 12px;
+        box-shadow: 0px 20px 60px 10px var(--form-dialog-shadow-color);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity, visibility;
+        transition-duration: 0.3s;
+        translate: 0 20px;
+
+        @include abstracts.screen(md) {
+            max-height: 270px;
+        }
+
+        @include abstracts.screen(sm) {
+            max-height: 360px;
+        }
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        border-bottom: 1px solid #d2d1d6;
+
+        &-input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            color: inherit;
+            background: transparent;
+
+            &::placeholder {
+                color: inherit;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 12px;
+        padding-bottom: 18px;
+        overscroll-behavior: contain;
+    }
+
+    &__option-item {
+        width: 100%;
+        padding: 16px 30px;
+        font-size: 1.4rem;
+        &:not(&--current) {
+            cursor: pointer;
+        }
+
+        &:not(&--current):hover {
+            background: var(--form-option-hover-bg-color);
+        }
+
+        &--current {
+            background: #ffb700;
+            font-weight: 500;
+        }
+    }
+
+    &__input-icon-error {
+        display: none;
+        margin-left: 12px;
+        animation: shake 0.6s;
+    }
+
+    &__error {
+        display: none;
+        margin-top: 10px;
+        text-align: left;
+        font-size: 1.4rem;
+        color: $error-color;
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &-input {
+            border: none;
+            outline: none;
+        }
+
+        &-label {
+            margin-left: 29px;
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.67;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 6px;
+            border: 1.5px solid #9e9da8;
+        }
+
+        &::after {
+            top: 7px;
+            left: 3px;
+            width: 14px;
+            height: 6px;
+            border: 2px solid;
+            border-color: transparent transparent var(--form-checked-icon-color) var(--form-checked-icon-color);
+            rotate: -45deg;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            border-color: transparent transparent #fff #fff;
+        }
+    }
+}

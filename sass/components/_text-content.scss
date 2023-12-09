@@ -1,0 +1,109 @@
+.text-content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        margin: 40px 0;
+    }
+
+    h2 {
+        margin: 32px 0;
+    }
+
+    h3 {
+        margin: 26px 0;
+    }
+
+    h4,
+    h5,
+    h6,
+    p,
+    img,
+    ul,
+    ol,
+    blockquote,
+    table {
+        margin: 20px 0;
+    }
+
+
+
+    ol {
+        margin: 40px 0;
+        padding-left: 16px;
+        list-style-type: disc;
+    }
+
+    img {
+        display: block;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img + em {
+        display: block;
+        font-style: italic;
+        text-align: center;
+    }
+
+    a {
+        color: #77dae6;
+        text-decoration: underline;
+    }
+
+    blockquote {
+        padding: 20px;
+        background: rgba($color: #77dae6, $alpha: 0.1);
+        border-left: 3px solid #77dae6;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding-top: 32px;
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts";
+.frame-content {
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--frame-content-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--frame-content-shadow-color);
+
+    @include abstracts.screen(sm) {
+        padding: 16px;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--frame-content-text-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+
+        @include abstracts.screen(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 6px;
+        color: var(--frame-content-text-color);
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+}

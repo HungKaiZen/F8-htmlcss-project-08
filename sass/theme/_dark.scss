@@ -1,0 +1,124 @@
+@use "../abstracts";
+html.dark {
+    --text-color: #fff;
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1885%)
+        hue-rotate(181deg) brightness(124%) contrast(107%);
+    --body-bg-color: #292e39;
+    --frame-content-bg-color: #171c28;
+    --frame-content-text-color: #fff;
+    --frame-content-shadow-color: rgba(23, 28, 40, 0.2);
+    --header-bg-color: #171c28;
+    --header-shadow-color: rgba(23, 28, 40, 0.2);
+    --top-act-group-bg-color: #292e39;
+    --top-act-group-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
+    --top-act-group-separate-bg-color: #ededf6;
+    --navbar-bg-color: #292e39;
+
+    // theme mode
+    --theme-switch-btn-bg-color: #2f3441;
+    --theme-switch-btn-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(99deg) brightness(100%) contrast(110%);;
+    --switch-btn-shadow-color: rgba(237, 237, 246, 0.2);
+    --switch-btn-circle-bg-color:  #2f3441;
+    --switch-btn-circle-border-color: #fff;
+
+    /* dropdown */
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(10%) saturate(1146%)
+        hue-rotate(185deg) brightness(93%) contrast(90%);
+    --department-icon-second-color: brightness(0) saturate(100%) invert(100%) sepia(1%)
+        saturate(6415%) hue-rotate(210deg) brightness(94%) contrast(111%);
+    --border-color: #171c28;
+
+    // cate-item
+    --cate-item-bg-color: #171c28;
+    --cate-item-thumb-bg-color: #292e39;
+    --cate-heading-color: #fff;
+    --cate-item-title-color: #fff;
+
+    // filter btn
+    --filter-btn-bg-color: #171c28;
+    --filter-btn-text-color: #fff;
+
+    // like btn
+    --like-btn-bg-color: #292e39;
+    --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
+
+    // product card
+    --product-card-bg-color: #171c28;
+    --product-card-shadow-color: rgba(237, 237, 246, 0.2);
+
+    // filter
+    --filter-bg-color: var(--dropdown-bg-color);
+    --filter-shadow: rgba(0, 0, 0, 0.4);
+    --filter-form-input-border-color: #d2d1d6;
+    --form-tag-bg-color: #171c28;
+    --form-tag-color: #9e9da8;
+    --filter-form-arrow: var(--dropdown-arrow-color);
+
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+
+    // auth
+    --auth-bg-color: #292e39;
+    --auth-intro-bg-color: #171c28;
+    --auth-heading-color: #b9babe;
+    --form-input-placeholder-color: #b9babe;
+    --auth-intro-desc-color: #b9babe;
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg-color: #171c28;
+    }
+
+    // form
+    --form-dialog-bg-color: #2f3441;
+    --form-option-hover-bg-color: #171c28;
+    --form-dialog-shadow-color: rgba(23, 28, 40, 0.2);
+    --form-checked-icon-color: #171c28;
+
+    // product detail #292E39
+    --product-bg-color: #292e39;
+
+    --breakcrumb-bg-color: #171c28;
+    --breakcrumb-shadow: rgba(23, 28, 40, 0.2);
+    --product-info-content-bg-color: #171c28;
+
+    --prod-info-bg-color: #171c28;
+    --product-detail-tag-bg-color: #292e39;
+
+    // Search bar
+    --search-bar-bg-color: #171c28;
+    --search-bar-bg-color: #171c28;
+
+    // review card
+    --review-card-bg-color: #171c28;
+
+    // act dropdown
+    --act-dropdown-bg-color: #2f3441;
+    --act-dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --cart-preview-item-border-color: #171c28;
+    --separate-bg-color: #2f3441;
+
+    // checkout
+    --checkout-breakcrumbs-bg-color: #171c28;
+    --cart-info-bg-color: #171c28;
+    --cart-info-shadow-color: rgba(23, 28, 40, 0.2);
+    --cart-item-border-color: #292e39;
+    --checkout-gift-shadow-color: rgba(23, 28, 40, 0.2);
+    // payment
+    --payment-item-bg-color: #292e39;
+
+    // modal
+    --modal-bg-color: #2f3441;
+
+    // profile
+    --profile-sidebar-bg-color: #171c28;
+    --profile-sidebar-shadow-color: rgba(23, 28, 40, 0.2);
+    --account-info-bg-color: #292E39;
+    --account-info-icon-bg-color: #171C28;
+    --profile-menu-link-hover-bg-color: #2f3441;
+}
